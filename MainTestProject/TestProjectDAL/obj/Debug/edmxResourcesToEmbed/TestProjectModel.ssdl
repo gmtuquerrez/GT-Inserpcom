@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="StatesDaily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="date" Type="date" />
+    <Property Name="state" Type="varchar" MaxLength="512" />
+    <Property Name="positive" Type="int" />
+    <Property Name="probableCases" Type="varchar" MaxLength="512" />
+    <Property Name="negative" Type="varchar" MaxLength="512" />
+    <Property Name="pending" Type="varchar" MaxLength="512" />
+    <Property Name="totalTestResultsSource" Type="varchar" MaxLength="512" />
+    <Property Name="totalTestResults" Type="int" />
+    <Property Name="hospitalizedCurrently" Type="int" />
+    <Property Name="hospitalizedCumulative" Type="int" />
+    <Property Name="inIcuCurrently" Type="varchar" MaxLength="512" />
+    <Property Name="inIcuCumulative" Type="varchar" MaxLength="512" />
+    <Property Name="onVentilatorCurrently" Type="int" />
+    <Property Name="onVentilatorCumulative" Type="varchar" MaxLength="512" />
+    <Property Name="recovered" Type="varchar" MaxLength="512" />
+    <Property Name="lastUpdateEt" Type="datetime" />
+    <Property Name="dateModified" Type="datetime" />
+    <Property Name="checkTimeEt" Type="varchar" MaxLength="512" />
+    <Property Name="death" Type="int" />
+    <Property Name="hospitalized" Type="int" />
+    <Property Name="hospitalizedDischarged" Type="varchar" MaxLength="512" />
+    <Property Name="dateChecked" Type="datetime" />
+    <Property Name="totalTestsViral" Type="int" />
+    <Property Name="positiveTestsViral" Type="int" />
+    <Property Name="negativeTestsViral" Type="int" />
+    <Property Name="positiveCasesViral" Type="varchar" MaxLength="512" />
+    <Property Name="deathConfirmed" Type="varchar" MaxLength="512" />
+    <Property Name="deathProbable" Type="varchar" MaxLength="512" />
+    <Property Name="totalTestEncountersViral" Type="varchar" MaxLength="512" />
+    <Property Name="totalTestsPeopleViral" Type="varchar" MaxLength="512" />
+    <Property Name="totalTestsAntibody" Type="varchar" MaxLength="512" />
+    <Property Name="positiveTestsAntibody" Type="varchar" MaxLength="512" />
+    <Property Name="negativeTestsAntibody" Type="varchar" MaxLength="512" />
+    <Property Name="totalTestsPeopleAntibody" Type="varchar" MaxLength="512" />
+    <Property Name="positiveTestsPeopleAntibody" Type="varchar" MaxLength="512" />
+    <Property Name="negativeTestsPeopleAntibody" Type="varchar" MaxLength="512" />
+    <Property Name="totalTestsPeopleAntigen" Type="varchar" MaxLength="512" />
+    <Property Name="positiveTestsPeopleAntigen" Type="varchar" MaxLength="512" />
+    <Property Name="totalTestsAntigen" Type="varchar" MaxLength="512" />
+    <Property Name="positiveTestsAntigen" Type="varchar" MaxLength="512" />
+    <Property Name="fips" Type="int" />
+    <Property Name="positiveIncrease" Type="varchar" MaxLength="512" />
+    <Property Name="negativeIncrease" Type="varchar" MaxLength="512" />
+    <Property Name="total" Type="int" />
+    <Property Name="totalTestResultsIncrease" Type="varchar" MaxLength="512" />
+    <Property Name="posNeg" Type="int" />
+    <Property Name="dataQualityGrade" Type="varchar" MaxLength="512" />
+    <Property Name="deathIncrease" Type="varchar" MaxLength="512" />
+    <Property Name="hospitalizedIncrease" Type="varchar" MaxLength="512" />
+    <Property Name="hash" Type="varchar" MaxLength="512" />
+    <Property Name="commercialScore" Type="varchar" MaxLength="512" />
+    <Property Name="negativeRegularScore" Type="varchar" MaxLength="512" />
+    <Property Name="negativeScore" Type="varchar" MaxLength="512" />
+    <Property Name="positiveScore" Type="varchar" MaxLength="512" />
+    <Property Name="score" Type="varchar" MaxLength="512" />
+    <Property Name="grade" Type="varchar" MaxLength="512" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsDaily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="date" Type="date" />
+    <Property Name="states" Type="int" />
+    <Property Name="positive" Type="int" />
+    <Property Name="negative" Type="int" />
+    <Property Name="pending" Type="int" />
+    <Property Name="hospitalizedCurrently" Type="int" />
+    <Property Name="hospitalizedCumulative" Type="int" />
+    <Property Name="inIcuCurrently" Type="int" />
+    <Property Name="inIcuCumulative" Type="int" />
+    <Property Name="onVentilatorCurrently" Type="int" />
+    <Property Name="onVentilatorCumulative" Type="int" />
+    <Property Name="dateChecked" Type="varchar" MaxLength="512" />
+    <Property Name="death" Type="int" />
+    <Property Name="hospitalized" Type="int" />
+    <Property Name="totalTestResults" Type="int" />
+    <Property Name="lastModified" Type="varchar" MaxLength="512" />
+    <Property Name="recovered" Type="varchar" MaxLength="512" />
+    <Property Name="total" Type="varchar" MaxLength="512" />
+    <Property Name="posNeg" Type="varchar" MaxLength="512" />
+    <Property Name="deathIncrease" Type="int" />
+    <Property Name="hospitalizedIncrease" Type="int" />
+    <Property Name="negativeIncrease" Type="int" />
+    <Property Name="positiveIncrease" Type="int" />
+    <Property Name="totalTestResultsIncrease" Type="int" />
+    <Property Name="hash" Type="varchar" MaxLength="512" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TestProjectModelStoreContainer">
+    <EntitySet Name="StatesDaily" EntityType="Self.StatesDaily" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsDaily" EntityType="Self.UsDaily" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

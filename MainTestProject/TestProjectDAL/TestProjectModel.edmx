@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TestProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="StatesDaily">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="date" Type="date" />
+          <Property Name="state" Type="varchar" MaxLength="512" />
+          <Property Name="positive" Type="int" />
+          <Property Name="probableCases" Type="varchar" MaxLength="512" />
+          <Property Name="negative" Type="varchar" MaxLength="512" />
+          <Property Name="pending" Type="varchar" MaxLength="512" />
+          <Property Name="totalTestResultsSource" Type="varchar" MaxLength="512" />
+          <Property Name="totalTestResults" Type="int" />
+          <Property Name="hospitalizedCurrently" Type="int" />
+          <Property Name="hospitalizedCumulative" Type="int" />
+          <Property Name="inIcuCurrently" Type="varchar" MaxLength="512" />
+          <Property Name="inIcuCumulative" Type="varchar" MaxLength="512" />
+          <Property Name="onVentilatorCurrently" Type="int" />
+          <Property Name="onVentilatorCumulative" Type="varchar" MaxLength="512" />
+          <Property Name="recovered" Type="varchar" MaxLength="512" />
+          <Property Name="lastUpdateEt" Type="datetime" />
+          <Property Name="dateModified" Type="datetime" />
+          <Property Name="checkTimeEt" Type="varchar" MaxLength="512" />
+          <Property Name="death" Type="int" />
+          <Property Name="hospitalized" Type="int" />
+          <Property Name="hospitalizedDischarged" Type="varchar" MaxLength="512" />
+          <Property Name="dateChecked" Type="datetime" />
+          <Property Name="totalTestsViral" Type="int" />
+          <Property Name="positiveTestsViral" Type="int" />
+          <Property Name="negativeTestsViral" Type="int" />
+          <Property Name="positiveCasesViral" Type="varchar" MaxLength="512" />
+          <Property Name="deathConfirmed" Type="varchar" MaxLength="512" />
+          <Property Name="deathProbable" Type="varchar" MaxLength="512" />
+          <Property Name="totalTestEncountersViral" Type="varchar" MaxLength="512" />
+          <Property Name="totalTestsPeopleViral" Type="varchar" MaxLength="512" />
+          <Property Name="totalTestsAntibody" Type="varchar" MaxLength="512" />
+          <Property Name="positiveTestsAntibody" Type="varchar" MaxLength="512" />
+          <Property Name="negativeTestsAntibody" Type="varchar" MaxLength="512" />
+          <Property Name="totalTestsPeopleAntibody" Type="varchar" MaxLength="512" />
+          <Property Name="positiveTestsPeopleAntibody" Type="varchar" MaxLength="512" />
+          <Property Name="negativeTestsPeopleAntibody" Type="varchar" MaxLength="512" />
+          <Property Name="totalTestsPeopleAntigen" Type="varchar" MaxLength="512" />
+          <Property Name="positiveTestsPeopleAntigen" Type="varchar" MaxLength="512" />
+          <Property Name="totalTestsAntigen" Type="varchar" MaxLength="512" />
+          <Property Name="positiveTestsAntigen" Type="varchar" MaxLength="512" />
+          <Property Name="fips" Type="int" />
+          <Property Name="positiveIncrease" Type="varchar" MaxLength="512" />
+          <Property Name="negativeIncrease" Type="varchar" MaxLength="512" />
+          <Property Name="total" Type="int" />
+          <Property Name="totalTestResultsIncrease" Type="varchar" MaxLength="512" />
+          <Property Name="posNeg" Type="int" />
+          <Property Name="dataQualityGrade" Type="varchar" MaxLength="512" />
+          <Property Name="deathIncrease" Type="varchar" MaxLength="512" />
+          <Property Name="hospitalizedIncrease" Type="varchar" MaxLength="512" />
+          <Property Name="hash" Type="varchar" MaxLength="512" />
+          <Property Name="commercialScore" Type="varchar" MaxLength="512" />
+          <Property Name="negativeRegularScore" Type="varchar" MaxLength="512" />
+          <Property Name="negativeScore" Type="varchar" MaxLength="512" />
+          <Property Name="positiveScore" Type="varchar" MaxLength="512" />
+          <Property Name="score" Type="varchar" MaxLength="512" />
+          <Property Name="grade" Type="varchar" MaxLength="512" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsDaily">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="date" Type="date" />
+          <Property Name="states" Type="int" />
+          <Property Name="positive" Type="int" />
+          <Property Name="negative" Type="int" />
+          <Property Name="pending" Type="int" />
+          <Property Name="hospitalizedCurrently" Type="int" />
+          <Property Name="hospitalizedCumulative" Type="int" />
+          <Property Name="inIcuCurrently" Type="int" />
+          <Property Name="inIcuCumulative" Type="int" />
+          <Property Name="onVentilatorCurrently" Type="int" />
+          <Property Name="onVentilatorCumulative" Type="int" />
+          <Property Name="dateChecked" Type="varchar" MaxLength="512" />
+          <Property Name="death" Type="int" />
+          <Property Name="hospitalized" Type="int" />
+          <Property Name="totalTestResults" Type="int" />
+          <Property Name="lastModified" Type="varchar" MaxLength="512" />
+          <Property Name="recovered" Type="varchar" MaxLength="512" />
+          <Property Name="total" Type="varchar" MaxLength="512" />
+          <Property Name="posNeg" Type="varchar" MaxLength="512" />
+          <Property Name="deathIncrease" Type="int" />
+          <Property Name="hospitalizedIncrease" Type="int" />
+          <Property Name="negativeIncrease" Type="int" />
+          <Property Name="positiveIncrease" Type="int" />
+          <Property Name="totalTestResultsIncrease" Type="int" />
+          <Property Name="hash" Type="varchar" MaxLength="512" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="TestProjectModelStoreContainer">
+          <EntitySet Name="StatesDaily" EntityType="Self.StatesDaily" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsDaily" EntityType="Self.UsDaily" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TestProjectEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="StatesDailies" EntityType="TestProjectModel.StatesDaily" />
+          <EntitySet Name="UsDailies" EntityType="TestProjectModel.UsDaily" />
+        </EntityContainer>
+        <EntityType Name="StatesDaily">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="state" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="positive" Type="Int32" />
+          <Property Name="probableCases" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="negative" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="pending" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="totalTestResultsSource" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="totalTestResults" Type="Int32" />
+          <Property Name="hospitalizedCurrently" Type="Int32" />
+          <Property Name="hospitalizedCumulative" Type="Int32" />
+          <Property Name="inIcuCurrently" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="inIcuCumulative" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="onVentilatorCurrently" Type="Int32" />
+          <Property Name="onVentilatorCumulative" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="recovered" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="lastUpdateEt" Type="DateTime" Precision="3" />
+          <Property Name="dateModified" Type="DateTime" Precision="3" />
+          <Property Name="checkTimeEt" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="death" Type="Int32" />
+          <Property Name="hospitalized" Type="Int32" />
+          <Property Name="hospitalizedDischarged" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="dateChecked" Type="DateTime" Precision="3" />
+          <Property Name="totalTestsViral" Type="Int32" />
+          <Property Name="positiveTestsViral" Type="Int32" />
+          <Property Name="negativeTestsViral" Type="Int32" />
+          <Property Name="positiveCasesViral" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="deathConfirmed" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="deathProbable" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="totalTestEncountersViral" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="totalTestsPeopleViral" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="totalTestsAntibody" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="positiveTestsAntibody" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="negativeTestsAntibody" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="totalTestsPeopleAntibody" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="positiveTestsPeopleAntibody" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="negativeTestsPeopleAntibody" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="totalTestsPeopleAntigen" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="positiveTestsPeopleAntigen" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="totalTestsAntigen" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="positiveTestsAntigen" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="fips" Type="Int32" />
+          <Property Name="positiveIncrease" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="negativeIncrease" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="total" Type="Int32" />
+          <Property Name="totalTestResultsIncrease" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="posNeg" Type="Int32" />
+          <Property Name="dataQualityGrade" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="deathIncrease" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="hospitalizedIncrease" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="hash" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="commercialScore" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="negativeRegularScore" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="negativeScore" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="positiveScore" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="score" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="grade" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="UsDaily">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="states" Type="Int32" />
+          <Property Name="positive" Type="Int32" />
+          <Property Name="negative" Type="Int32" />
+          <Property Name="pending" Type="Int32" />
+          <Property Name="hospitalizedCurrently" Type="Int32" />
+          <Property Name="hospitalizedCumulative" Type="Int32" />
+          <Property Name="inIcuCurrently" Type="Int32" />
+          <Property Name="inIcuCumulative" Type="Int32" />
+          <Property Name="onVentilatorCurrently" Type="Int32" />
+          <Property Name="onVentilatorCumulative" Type="Int32" />
+          <Property Name="dateChecked" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="death" Type="Int32" />
+          <Property Name="hospitalized" Type="Int32" />
+          <Property Name="totalTestResults" Type="Int32" />
+          <Property Name="lastModified" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="recovered" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="total" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="posNeg" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="deathIncrease" Type="Int32" />
+          <Property Name="hospitalizedIncrease" Type="Int32" />
+          <Property Name="negativeIncrease" Type="Int32" />
+          <Property Name="positiveIncrease" Type="Int32" />
+          <Property Name="totalTestResultsIncrease" Type="Int32" />
+          <Property Name="hash" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestProjectModelStoreContainer" CdmEntityContainer="TestProjectEntities" >
+          <EntitySetMapping Name="StatesDailies">
+            <EntityTypeMapping TypeName="TestProjectModel.StatesDaily">
+              <MappingFragment StoreEntitySet="StatesDaily">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="grade" ColumnName="grade" />
+                <ScalarProperty Name="score" ColumnName="score" />
+                <ScalarProperty Name="positiveScore" ColumnName="positiveScore" />
+                <ScalarProperty Name="negativeScore" ColumnName="negativeScore" />
+                <ScalarProperty Name="negativeRegularScore" ColumnName="negativeRegularScore" />
+                <ScalarProperty Name="commercialScore" ColumnName="commercialScore" />
+                <ScalarProperty Name="hash" ColumnName="hash" />
+                <ScalarProperty Name="hospitalizedIncrease" ColumnName="hospitalizedIncrease" />
+                <ScalarProperty Name="deathIncrease" ColumnName="deathIncrease" />
+                <ScalarProperty Name="dataQualityGrade" ColumnName="dataQualityGrade" />
+                <ScalarProperty Name="posNeg" ColumnName="posNeg" />
+                <ScalarProperty Name="totalTestResultsIncrease" ColumnName="totalTestResultsIncrease" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="negativeIncrease" ColumnName="negativeIncrease" />
+                <ScalarProperty Name="positiveIncrease" ColumnName="positiveIncrease" />
+                <ScalarProperty Name="fips" ColumnName="fips" />
+                <ScalarProperty Name="positiveTestsAntigen" ColumnName="positiveTestsAntigen" />
+                <ScalarProperty Name="totalTestsAntigen" ColumnName="totalTestsAntigen" />
+                <ScalarProperty Name="positiveTestsPeopleAntigen" ColumnName="positiveTestsPeopleAntigen" />
+                <ScalarProperty Name="totalTestsPeopleAntigen" ColumnName="totalTestsPeopleAntigen" />
+                <ScalarProperty Name="negativeTestsPeopleAntibody" ColumnName="negativeTestsPeopleAntibody" />
+                <ScalarProperty Name="positiveTestsPeopleAntibody" ColumnName="positiveTestsPeopleAntibody" />
+                <ScalarProperty Name="totalTestsPeopleAntibody" ColumnName="totalTestsPeopleAntibody" />
+                <ScalarProperty Name="negativeTestsAntibody" ColumnName="negativeTestsAntibody" />
+                <ScalarProperty Name="positiveTestsAntibody" ColumnName="positiveTestsAntibody" />
+                <ScalarProperty Name="totalTestsAntibody" ColumnName="totalTestsAntibody" />
+                <ScalarProperty Name="totalTestsPeopleViral" ColumnName="totalTestsPeopleViral" />
+                <ScalarProperty Name="totalTestEncountersViral" ColumnName="totalTestEncountersViral" />
+                <ScalarProperty Name="deathProbable" ColumnName="deathProbable" />
+                <ScalarProperty Name="deathConfirmed" ColumnName="deathConfirmed" />
+                <ScalarProperty Name="positiveCasesViral" ColumnName="positiveCasesViral" />
+                <ScalarProperty Name="negativeTestsViral" ColumnName="negativeTestsViral" />
+                <ScalarProperty Name="positiveTestsViral" ColumnName="positiveTestsViral" />
+                <ScalarProperty Name="totalTestsViral" ColumnName="totalTestsViral" />
+                <ScalarProperty Name="dateChecked" ColumnName="dateChecked" />
+                <ScalarProperty Name="hospitalizedDischarged" ColumnName="hospitalizedDischarged" />
+                <ScalarProperty Name="hospitalized" ColumnName="hospitalized" />
+                <ScalarProperty Name="death" ColumnName="death" />
+                <ScalarProperty Name="checkTimeEt" ColumnName="checkTimeEt" />
+                <ScalarProperty Name="dateModified" ColumnName="dateModified" />
+                <ScalarProperty Name="lastUpdateEt" ColumnName="lastUpdateEt" />
+                <ScalarProperty Name="recovered" ColumnName="recovered" />
+                <ScalarProperty Name="onVentilatorCumulative" ColumnName="onVentilatorCumulative" />
+                <ScalarProperty Name="onVentilatorCurrently" ColumnName="onVentilatorCurrently" />
+                <ScalarProperty Name="inIcuCumulative" ColumnName="inIcuCumulative" />
+                <ScalarProperty Name="inIcuCurrently" ColumnName="inIcuCurrently" />
+                <ScalarProperty Name="hospitalizedCumulative" ColumnName="hospitalizedCumulative" />
+                <ScalarProperty Name="hospitalizedCurrently" ColumnName="hospitalizedCurrently" />
+                <ScalarProperty Name="totalTestResults" ColumnName="totalTestResults" />
+                <ScalarProperty Name="totalTestResultsSource" ColumnName="totalTestResultsSource" />
+                <ScalarProperty Name="pending" ColumnName="pending" />
+                <ScalarProperty Name="negative" ColumnName="negative" />
+                <ScalarProperty Name="probableCases" ColumnName="probableCases" />
+                <ScalarProperty Name="positive" ColumnName="positive" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsDailies">
+            <EntityTypeMapping TypeName="TestProjectModel.UsDaily">
+              <MappingFragment StoreEntitySet="UsDaily">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="hash" ColumnName="hash" />
+                <ScalarProperty Name="totalTestResultsIncrease" ColumnName="totalTestResultsIncrease" />
+                <ScalarProperty Name="positiveIncrease" ColumnName="positiveIncrease" />
+                <ScalarProperty Name="negativeIncrease" ColumnName="negativeIncrease" />
+                <ScalarProperty Name="hospitalizedIncrease" ColumnName="hospitalizedIncrease" />
+                <ScalarProperty Name="deathIncrease" ColumnName="deathIncrease" />
+                <ScalarProperty Name="posNeg" ColumnName="posNeg" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="recovered" ColumnName="recovered" />
+                <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+                <ScalarProperty Name="totalTestResults" ColumnName="totalTestResults" />
+                <ScalarProperty Name="hospitalized" ColumnName="hospitalized" />
+                <ScalarProperty Name="death" ColumnName="death" />
+                <ScalarProperty Name="dateChecked" ColumnName="dateChecked" />
+                <ScalarProperty Name="onVentilatorCumulative" ColumnName="onVentilatorCumulative" />
+                <ScalarProperty Name="onVentilatorCurrently" ColumnName="onVentilatorCurrently" />
+                <ScalarProperty Name="inIcuCumulative" ColumnName="inIcuCumulative" />
+                <ScalarProperty Name="inIcuCurrently" ColumnName="inIcuCurrently" />
+                <ScalarProperty Name="hospitalizedCumulative" ColumnName="hospitalizedCumulative" />
+                <ScalarProperty Name="hospitalizedCurrently" ColumnName="hospitalizedCurrently" />
+                <ScalarProperty Name="pending" ColumnName="pending" />
+                <ScalarProperty Name="negative" ColumnName="negative" />
+                <ScalarProperty Name="positive" ColumnName="positive" />
+                <ScalarProperty Name="states" ColumnName="states" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

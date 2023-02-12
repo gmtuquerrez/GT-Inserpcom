@@ -1,0 +1,13 @@
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\obj\Debug\TestProjectDAL.csproj.AssemblyReference.cache
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\obj\Debug\TestProjectDAL.csproj.SuggestedBindingRedirects.cache
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\obj\Debug\TestProjectDAL.csproj.CoreCompileInputs.cache
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\bin\Debug\TestProjectDAL.exe.config
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\bin\Debug\TestProjectDAL.exe
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\bin\Debug\TestProjectDAL.pdb
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\bin\Debug\EntityFramework.dll
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\bin\Debug\EntityFramework.xml
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\obj\Debug\TestProjectDAL.csproj.CopyComplete
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\obj\Debug\TestProjectDAL.exe
+C:\Users\gerar\Source\Repos\PruebaInserpcom\MainTestProject\TestProjectDAL\obj\Debug\TestProjectDAL.pdb
